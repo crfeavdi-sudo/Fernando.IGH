@@ -1,94 +1,72 @@
 /* =========================================
-   COCINA SIN RASTRO
-   ESTILOS PRINCIPALES
+   CONFIGURACIÓN GENERAL
 ========================================= */
 
 :root {
 
-    --verde: #214d3b;
-    --verde-oscuro: #123328;
-    --verde-claro: #3e765d;
+    --verde: #53634c;
+    --verde-oscuro: #34412f;
+    --verde-claro: #dfe8db;
 
-    --crema: #f5f2e9;
+    --crema: #f7f5ef;
     --blanco: #ffffff;
 
-    --texto: #26312c;
-    --gris: #6d7771;
+    --texto: #252923;
+    --texto-claro: #697066;
 
-    --agua: #277c91;
-    --alimento: #a26a2e;
-    --aceite: #8c6b20;
+    --agua: #638fa5;
+    --alimentos: #a16b43;
+    --aceite: #b28a42;
 
-    --rojo: #a44b42;
+    --borde: #e2e5df;
 
-    --sombra: 0 20px 50px rgba(25, 45, 35, 0.10);
+    --sombra:
+        0 15px 45px rgba(32, 42, 29, 0.09);
 
-    --radio: 22px;
-
-    --ancho: 1180px;
+    --transicion:
+        all 0.3s ease;
 }
 
 
 /* =========================================
-   CONFIGURACIÓN GENERAL
+   RESET
 ========================================= */
 
 * {
-
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
 }
 
-
 html {
-
     scroll-behavior: smooth;
-
-    scroll-padding-top: 80px;
 }
 
-
 body {
-
     font-family: "DM Sans", sans-serif;
-
     color: var(--texto);
-
     background: var(--crema);
-
     line-height: 1.7;
 }
 
-
 a {
-
     color: inherit;
-
     text-decoration: none;
 }
 
-
 button {
-
-    font: inherit;
+    font-family: inherit;
 }
 
-
-.container {
-
-    width: min(92%, var(--ancho));
-
-    margin: auto;
+img {
+    max-width: 100%;
+    display: block;
 }
 
-
-.section {
-
-    padding: 100px 0;
+.contenedor {
+    width: min(1120px, 92%);
+    margin: 0 auto;
 }
-
 
 
 /* =========================================
@@ -96,140 +74,118 @@ button {
 ========================================= */
 
 .header {
-
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
-
     z-index: 1000;
 
-    transition: 0.3s;
-}
+    padding: 18px 0;
 
-
-.header.scrolled {
-
-    background: rgba(18, 51, 40, 0.96);
+    background: rgba(247, 245, 239, 0.94);
 
     backdrop-filter: blur(12px);
 
-    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+    transition: var(--transicion);
 }
 
+.header.scrolled {
+    padding: 11px 0;
 
-.navbar {
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.07);
+}
 
-    min-height: 78px;
-
+.header-contenido {
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-}
-
-
-.logo {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    color: white;
-
-    font-size: 1.05rem;
-}
-
-
-.logo strong {
-
-    font-weight: 700;
-}
-
-
-.logo-icon {
-
-    width: 38px;
-    height: 38px;
-
-    border-radius: 50%;
-
-    display: grid;
-
-    place-items: center;
-
-    background: rgba(255,255,255,0.15);
-
-    color: #d9e7bc;
-}
-
-
-.nav-links {
-
-    display: flex;
-
-    list-style: none;
-
     gap: 30px;
 }
 
 
-.nav-links a {
+/* LOGO */
 
-    color: rgba(255,255,255,0.9);
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 
-    font-size: 0.9rem;
+    font-family: "Playfair Display", serif;
 
-    position: relative;
+    font-size: 21px;
+    font-weight: 700;
 }
 
+.logo-icono {
+    width: 38px;
+    height: 38px;
 
-.nav-links a::after {
+    display: grid;
+    place-items: center;
 
-    content: "";
-
-    position: absolute;
-
-    bottom: -6px;
-
-    left: 0;
-
-    width: 0;
-
-    height: 2px;
-
-    background: #d9e7bc;
-
-    transition: 0.3s;
-}
-
-
-.nav-links a:hover::after {
-
-    width: 100%;
-}
-
-
-.menu-toggle {
-
-    display: none;
-
-    border: none;
-
-    background: transparent;
-
+    background: var(--verde);
     color: white;
 
-    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+
+/* NAV */
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav a {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #50564e;
+
+    transition: var(--transicion);
+}
+
+.nav a:hover {
+    color: var(--verde);
+}
+
+.nav-juego {
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    background: var(--verde);
+    color: white !important;
+}
+
+.nav-juego:hover {
+    background: var(--verde-oscuro);
+}
+
+
+/* BOTÓN MENU */
+
+.menu-btn {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: var(--verde);
+    color: white;
+
+    font-size: 19px;
 
     cursor: pointer;
 }
-
 
 
 /* =========================================
@@ -237,142 +193,928 @@ button {
 ========================================= */
 
 .hero {
+    min-height: 720px;
 
-    min-height: 100vh;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            120deg,
+            #253022 0%,
+            #44513e 52%,
+            #67755e 100%
+        );
+
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    right: -180px;
+    top: -180px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 50%;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    left: -170px;
+    bottom: -220px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 75% 40%,
+            rgba(255, 255, 255, 0.08),
+            transparent 35%
+        );
+}
+
+.hero-contenido {
+    position: relative;
+    z-index: 2;
+
+    padding-top: 80px;
+}
+
+.hero-etiqueta {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    border-radius: 50px;
+
+    color: #edf2e9;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    max-width: 850px;
+
+    margin: 25px 0 20px;
+
+    color: white;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 7vw, 78px);
+
+    line-height: 1.08;
+}
+
+.hero h1 span {
+    color: #dce7d5;
+}
+
+.hero p {
+    max-width: 680px;
+
+    color: #e3e8df;
+
+    font-size: 18px;
+}
+
+.hero-botones {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 35px;
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 48px;
+
+    padding: 12px 22px;
+
+    border-radius: 9px;
+
+    font-weight: 700;
+
+    transition: var(--transicion);
+}
+
+.btn-principal {
+    background: white;
+    color: var(--verde-oscuro);
+}
+
+.btn-principal:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secundario {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    color: white;
+}
+
+.btn-secundario:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+.seccion {
+    padding: 110px 0;
+}
+
+.seccion-clara {
+    background: #ffffff;
+}
+
+.introduccion {
+    padding: 105px 0;
+    background: var(--crema);
+}
+
+.titulo-seccion {
+    max-width: 850px;
+
+    margin-bottom: 55px;
+}
+
+.titulo-seccion.centrado {
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.etiqueta {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: var(--verde);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.titulo-seccion h2,
+.contenido-texto h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.titulo-seccion h2 span,
+.contenido-texto h2 span {
+    color: var(--verde);
+}
+
+.titulo-seccion p {
+    color: var(--texto-claro);
+    font-size: 17px;
+}
+
+
+/* =========================================
+   CARDS DE TEMAS
+========================================= */
+
+.cards-temas {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.tema-card {
+    position: relative;
+
+    padding: 35px;
+
+    background: white;
+
+    border: 1px solid var(--borde);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: var(--transicion);
+}
+
+.tema-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: var(--sombra);
+}
+
+.tema-card > span {
+    color: #a5aaa3;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.tema-icono {
+    width: 58px;
+    height: 58px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 14px;
+
+    font-size: 23px;
+}
+
+.agua-card .tema-icono {
+    background: #e5eff3;
+    color: var(--agua);
+}
+
+.alimentos-card .tema-icono {
+    background: #f1e8df;
+    color: var(--alimentos);
+}
+
+.aceite-card .tema-icono {
+    background: #f3ead5;
+    color: var(--aceite);
+}
+
+.tema-card h3 {
+    margin: 7px 0 12px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 29px;
+}
+
+.tema-card p {
+    min-height: 100px;
+
+    color: var(--texto-claro);
+}
+
+.tema-card a {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: var(--verde);
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   CONTENIDO GRID
+========================================= */
+
+.contenido-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.15fr 0.85fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+.contenido-grid.invertido {
+    grid-template-columns:
+        0.85fr 1.15fr;
+}
+
+.contenido-texto p {
+    margin-bottom: 18px;
+
+    color: var(--texto-claro);
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   LISTA CHECK
+========================================= */
+
+.lista-check {
+    display: grid;
+
+    gap: 14px;
+
+    margin-top: 30px;
+}
+
+.lista-check div {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+}
+
+.lista-check i {
+    margin-top: 5px;
+
+    color: var(--verde);
+}
+
+.lista-check span {
+    color: #4f554e;
+}
+
+
+/* =========================================
+   DATO CARD
+========================================= */
+
+.dato-card {
+    padding: 45px;
+
+    border-radius: 22px;
+
+    box-shadow: var(--sombra);
+}
+
+.agua-dato {
+    background: #e9f1f4;
+}
+
+.alimentos-dato {
+    background: #f3e9df;
+}
+
+.dato-icono {
+    width: 62px;
+    height: 62px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 25px;
+
+    border-radius: 15px;
+
+    background: white;
+
+    color: var(--verde);
+
+    font-size: 25px;
+}
+
+.dato-card h3 {
+    margin-bottom: 14px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+}
+
+.dato-card p {
+    color: #5e655d;
+}
+
+.dato-numero {
+    display: flex;
+    align-items: center;
+
+    margin-top: 25px;
+}
+
+.dato-numero strong {
+    font-family: "Playfair Display", serif;
+
+    font-size: 80px;
+
+    line-height: 1;
+
+    color: var(--verde);
+}
+
+.dato-numero span {
+    color: var(--verde);
+
+    font-size: 30px;
+}
+
+.dato-pequeno {
+    font-size: 14px;
+}
+
+
+/* =========================================
+   MINI LISTA
+========================================= */
+
+.mini-lista {
+    display: grid;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.mini-lista span {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-weight: 600;
+}
+
+.mini-lista i {
+    color: var(--verde);
+}
+
+
+/* =========================================
+   FRASE DESTACADA
+========================================= */
+
+.frase-destacada {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    padding: 20px;
+
+    border-left: 3px solid var(--verde);
+
+    background: #f5f6f2;
+}
+
+.frase-destacada i {
+    color: var(--verde);
+
+    font-size: 20px;
+}
+
+.frase-destacada p {
+    margin: 0;
+}
+
+
+/* =========================================
+   ACEITE
+========================================= */
+
+.contenido-aceite {
+    background:
+        linear-gradient(
+            135deg,
+            #f6f1e5,
+            #eee8d8
+        );
+}
+
+.pasos-aceite {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.paso {
+    position: relative;
+
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    border: 1px solid rgba(90, 80, 50, 0.1);
+
+    border-radius: 17px;
+}
+
+.paso-numero {
+    position: absolute;
+
+    top: 20px;
+    right: 22px;
+
+    color: #b2aa98;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.paso > i {
+    margin: 25px 0 20px;
+
+    color: var(--aceite);
+
+    font-size: 28px;
+}
+
+.paso h3 {
+    margin-bottom: 8px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+}
+
+.paso p {
+    color: var(--texto-claro);
+
+    font-size: 14px;
+}
+
+.alerta-aceite {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 25px;
+
+    padding: 20px 25px;
+
+    background: #fff;
+
+    border-left: 4px solid var(--aceite);
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.alerta-aceite > i {
+    color: var(--aceite);
+
+    font-size: 25px;
+}
+
+.alerta-aceite p {
+    margin-top: 2px;
+
+    color: var(--texto-claro);
+}
+
+
+/* =========================================
+   RESIDUOS
+========================================= */
+
+.residuos-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.residuo-card {
+    padding: 30px;
+
+    border: 1px solid var(--borde);
+
+    border-radius: 16px;
+
+    background: white;
+
+    transition: var(--transicion);
+}
+
+.residuo-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: var(--sombra);
+}
+
+.residuo-icono {
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+.residuo-card h3 {
+    margin-bottom: 10px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+}
+
+.residuo-card p {
+    min-height: 110px;
+
+    color: var(--texto-claro);
+
+    font-size: 14px;
+}
+
+.residuo-card span {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    background: var(--verde-claro);
+
+    border-radius: 6px;
+
+    color: var(--verde-oscuro);
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   ACCIONES
+========================================= */
+
+.acciones {
+    background: var(--verde-oscuro);
+
+    color: white;
+}
+
+.acciones-grid {
+    display: grid;
+
+    grid-template-columns:
+        0.8fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+.acciones .etiqueta {
+    color: #c8d5c1;
+}
+
+.acciones-texto h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(35px, 5vw, 53px);
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.acciones-texto p {
+    color: #cbd2c8;
+}
+
+.acciones-lista {
+    display: grid;
+
+    gap: 15px;
+}
+
+.accion {
+    display: grid;
+
+    grid-template-columns: 60px 1fr;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 12px;
+}
+
+.accion > span {
+    color: #aebdaa;
+
+    font-weight: 800;
+}
+
+.accion h3 {
+    margin-bottom: 3px;
+
+    font-size: 18px;
+}
+
+.accion p {
+    color: #c4ccc1;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   MINI JUEGO
+========================================= */
+
+.juego {
+    padding: 110px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f7f5ef 0%,
+            #edf2e9 100%
+        );
+}
+
+.juego-card {
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    padding: 38px;
+
+    background: white;
+
+    border: 1px solid var(--borde);
+
+    border-radius: 22px;
+
+    box-shadow: var(--sombra);
+
+    text-align: center;
+}
+
+.juego-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid var(--borde);
+
+    color: var(--verde);
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+.residuo-pregunta {
+    padding: 35px 10px 25px;
+}
+
+.icono-residuo {
+    margin-bottom: 15px;
+
+    font-size: 75px;
+}
+
+.residuo-pregunta h3 {
+    margin-bottom: 8px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+}
+
+.residuo-pregunta p {
+    color: var(--texto-claro);
+}
+
+.opciones {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 14px;
+}
+
+.opcion {
+    min-height: 65px;
 
     display: flex;
 
     align-items: center;
 
-    position: relative;
+    justify-content: center;
 
-    overflow: hidden;
+    gap: 10px;
 
-    color: white;
+    padding: 15px;
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(12,39,30,0.98),
-            rgba(33,77,59,0.82)
-        );
-}
+    border: 2px solid #e3e7e1;
 
+    border-radius: 12px;
 
-.hero::before {
+    background: #fafbf9;
 
-    content: "";
+    color: var(--texto);
 
-    position: absolute;
-
-    width: 550px;
-
-    height: 550px;
-
-    border-radius: 50%;
-
-    right: -150px;
-
-    top: -120px;
-
-    border: 1px solid rgba(255,255,255,0.12);
-
-    box-shadow:
-
-        0 0 0 60px rgba(255,255,255,0.025),
-
-        0 0 0 120px rgba(255,255,255,0.02);
-}
-
-
-.hero::after {
-
-    content: "♻";
-
-    position: absolute;
-
-    right: 8%;
-
-    bottom: 7%;
-
-    font-size: 12rem;
-
-    color: rgba(255,255,255,0.035);
-}
-
-
-.hero-content {
-
-    position: relative;
-
-    z-index: 2;
-
-    padding-top: 70px;
-
-    max-width: 850px;
-}
-
-
-.eyebrow {
-
-    display: inline-block;
-
-    letter-spacing: 2px;
-
-    font-size: 0.76rem;
+    font-size: 15px;
 
     font-weight: 700;
 
-    color: #c9d9b5;
+    cursor: pointer;
 
-    margin-bottom: 20px;
+    transition: var(--transicion);
 }
 
-
-.hero h1 {
-
-    font-family: "Playfair Display", serif;
-
-    font-size: clamp(3rem, 7vw, 6.5rem);
-
-    line-height: 0.98;
-
-    letter-spacing: -2px;
-
-    margin-bottom: 30px;
+.opcion span {
+    font-size: 20px;
 }
 
+.opcion:hover:not(:disabled) {
+    border-color: var(--verde);
 
-.hero h1 span {
+    background: #f0f4ed;
 
-    color: #cbdcae;
+    transform: translateY(-2px);
 }
 
-
-.hero p {
-
-    max-width: 680px;
-
-    font-size: 1.15rem;
-
-    color: rgba(255,255,255,0.78);
+.opcion:disabled {
+    cursor: default;
 }
 
+.opcion.correcta {
+    background: #e0f2df;
 
-.hero-buttons {
+    border-color: #5b9d58;
 
-    display: flex;
-
-    gap: 15px;
-
-    margin-top: 35px;
-
-    flex-wrap: wrap;
+    color: #2c6829;
 }
 
+.opcion.incorrecta {
+    background: #f7dddd;
 
-.btn {
+    border-color: #c65e5e;
 
+    color: #8a2929;
+}
+
+.mensaje-juego {
+    min-height: 28px;
+
+    margin: 20px 0;
+
+    font-weight: 800;
+}
+
+.btn-juego {
     display: inline-flex;
 
     align-items: center;
@@ -381,863 +1123,56 @@ button {
 
     gap: 10px;
 
-    padding: 14px 24px;
+    padding: 13px 23px;
 
-    border-radius: 50px;
+    border: none;
 
-    font-weight: 700;
-
-    transition: 0.3s;
-}
-
-
-.btn-primary {
-
-    background: #d4dfb9;
-
-    color: var(--verde-oscuro);
-}
-
-
-.btn-primary:hover {
-
-    transform: translateY(-3px);
-
-    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
-}
-
-
-.btn-outline {
-
-    border: 1px solid rgba(255,255,255,0.35);
-
-    color: white;
-}
-
-
-.btn-outline:hover {
-
-    background: rgba(255,255,255,0.1);
-}
-
-
-.scroll-indicator {
-
-    position: absolute;
-
-    bottom: 30px;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    font-size: 0.7rem;
-
-    letter-spacing: 2px;
-
-    opacity: 0.6;
-}
-
-
-
-/* =========================================
-   TEXTOS
-========================================= */
-
-.section-tag {
-
-    display: inline-block;
-
-    color: #799b75;
-
-    letter-spacing: 2px;
-
-    font-size: 0.76rem;
-
-    font-weight: 700;
-}
-
-
-h2 {
-
-    font-family: "Playfair Display", serif;
-
-    font-size: clamp(2.3rem, 4vw, 4rem);
-
-    line-height: 1.1;
-
-    color: var(--verde-oscuro);
-
-    margin: 12px 0 25px;
-}
-
-
-
-/* =========================================
-   INTRODUCCIÓN
-========================================= */
-
-.intro {
-
-    background: white;
-}
-
-
-.intro-grid {
-
-    display: grid;
-
-    grid-template-columns: 0.85fr 1.15fr;
-
-    gap: 80px;
-
-    align-items: center;
-}
-
-
-.intro-text {
-
-    color: var(--gris);
-
-    font-size: 1.05rem;
-}
-
-
-.intro-text p + p {
-
-    margin-top: 15px;
-}
-
-
-.quote {
-
-    margin-top: 30px;
-
-    padding: 22px 25px;
-
-    border-left: 3px solid var(--verde-claro);
-
-    background: var(--crema);
-
-    display: flex;
-
-    gap: 15px;
-
-    color: var(--verde);
-
-    font-weight: 600;
-}
-
-
-
-/* =========================================
-   TEMAS
-========================================= */
-
-.topics {
-
-    background: var(--crema);
-}
-
-
-.section-heading {
-
-    text-align: center;
-
-    max-width: 700px;
-
-    margin: auto;
-
-    margin-bottom: 50px;
-}
-
-
-.section-heading p {
-
-    color: var(--gris);
-}
-
-
-.topic-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(3,1fr);
-
-    gap: 22px;
-}
-
-
-.topic-card {
-
-    min-height: 320px;
-
-    padding: 35px;
-
-    background: white;
-
-    border-radius: var(--radio);
-
-    box-shadow: var(--sombra);
-
-    position: relative;
-
-    overflow: hidden;
-
-    transition: 0.35s;
-}
-
-
-.topic-card:hover {
-
-    transform: translateY(-8px);
-}
-
-
-.topic-icon {
-
-    width: 58px;
-    height: 58px;
-
-    border-radius: 16px;
-
-    display: grid;
-
-    place-items: center;
-
-    font-size: 1.5rem;
-
-    margin-bottom: 35px;
-}
-
-
-.water .topic-icon {
-
-    background: #e1f2f5;
-
-    color: var(--agua);
-}
-
-
-.food .topic-icon {
-
-    background: #f4e8d9;
-
-    color: var(--alimento);
-}
-
-
-.oil .topic-icon {
-
-    background: #f4eed7;
-
-    color: var(--aceite);
-}
-
-
-.topic-card > span {
-
-    color: var(--gris);
-
-    font-size: 0.75rem;
-
-    font-weight: 700;
-}
-
-
-.topic-card h3 {
-
-    font-family: "Playfair Display", serif;
-
-    font-size: 2rem;
-
-    color: var(--verde-oscuro);
-
-    margin: 4px 0 8px;
-}
-
-
-.topic-card p {
-
-    color: var(--gris);
-}
-
-
-.card-link {
-
-    position: absolute;
-
-    bottom: 30px;
-
-    font-weight: 700;
-
-    color: var(--verde);
-}
-
-
-
-/* =========================================
-   SECCIONES AGUA / ALIMENTOS / ACEITE
-========================================= */
-
-.water-section {
-
-    background: #edf6f4;
-}
-
-
-.food-section {
-
-    background: #fbf5eb;
-}
-
-
-.oil-section {
-
-    background: #f6f2e4;
-}
-
-
-.two-columns {
-
-    display: grid;
-
-    grid-template-columns: 0.9fr 1.1fr;
-
-    gap: 90px;
-
-    align-items: center;
-}
-
-
-.two-columns.reverse {
-
-    grid-template-columns: 1.1fr 0.9fr;
-}
-
-
-.content-info > p {
-
-    color: var(--gris);
-
-    margin-bottom: 28px;
-}
-
-
-.content-info h3 {
-
-    font-size: 1rem;
-
-    color: var(--verde-oscuro);
-
-    margin: 25px 0 10px;
-}
-
-
-.content-visual {
-
-    min-height: 530px;
-
-    display: grid;
-
-    place-items: center;
-
-    position: relative;
-}
-
-
-.big-icon {
-
-    width: 330px;
-
-    height: 330px;
-
-    border-radius: 50%;
-
-    display: grid;
-
-    place-items: center;
-
-    font-size: 9rem;
-}
-
-
-.water-bg {
-
-    background: #d8edf0;
-
-    color: var(--agua);
-}
-
-
-.food-bg {
-
-    background: #f0dfca;
-
-    color: var(--alimento);
-}
-
-
-.oil-bg {
-
-    background: #eee5c7;
-
-    color: var(--aceite);
-}
-
-
-.floating-stat {
-
-    position: absolute;
-
-    bottom: 65px;
-
-    right: 35px;
-
-    padding: 17px 20px;
-
-    background: white;
-
-    border-radius: 15px;
-
-    box-shadow: var(--sombra);
-
-    display: flex;
-
-    flex-direction: column;
-}
-
-
-.floating-stat strong {
-
-    color: var(--verde);
-
-    font-size: 1.4rem;
-}
-
-
-.floating-stat span {
-
-    color: var(--gris);
-
-    font-size: 0.75rem;
-}
-
-
-
-/* =========================================
-   LISTAS
-========================================= */
-
-.check-list {
-
-    list-style: none;
-
-    display: grid;
-
-    gap: 10px;
-}
-
-
-.check-list li {
-
-    display: flex;
-
-    gap: 12px;
-
-    color: var(--gris);
-}
-
-
-.check-list i {
-
-    color: var(--verde-claro);
-
-    margin-top: 6px;
-}
-
-
-.danger-list i {
-
-    color: var(--rojo);
-}
-
-
-
-/* =========================================
-   ALIMENTOS
-========================================= */
-
-.feature-list {
-
-    display: grid;
-
-    gap: 15px;
-}
-
-
-.feature {
-
-    display: flex;
-
-    gap: 18px;
-
-    padding: 18px;
-
-    background: rgba(255,255,255,0.6);
-
-    border-radius: 16px;
-}
-
-
-.feature-icon {
-
-    width: 45px;
-    height: 45px;
-
-    flex-shrink: 0;
-
-    display: grid;
-
-    place-items: center;
-
-    background: white;
-
-    border-radius: 12px;
-
-    color: var(--verde-claro);
-}
-
-
-.feature h3 {
-
-    margin: 0;
-}
-
-
-.feature p {
-
-    color: var(--gris);
-
-    font-size: 0.9rem;
-}
-
-
-
-/* =========================================
-   ACEITE
-========================================= */
-
-.process {
-
-    margin: 30px 0;
-}
-
-
-.process-step {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-}
-
-
-.process-step > span {
-
-    width: 42px;
-    height: 42px;
-
-    border-radius: 50%;
+    border-radius: 9px;
 
     background: var(--verde);
 
     color: white;
 
-    display: grid;
+    font-size: 15px;
 
-    place-items: center;
+    font-weight: 700;
 
-    font-weight: bold;
+    cursor: pointer;
+
+    transition: var(--transicion);
 }
 
-
-.process-step strong,
-.process-step small {
-
-    display: block;
-}
-
-
-.process-step strong {
-
-    color: var(--verde-oscuro);
-}
-
-
-.process-step small {
-
-    color: var(--gris);
-
-    font-size: 0.82rem;
-}
-
-
-.process-line {
-
-    width: 2px;
-
-    height: 18px;
-
-    background: #c5b989;
-
-    margin-left: 20px;
-}
-
-
-.warning-box {
-
-    padding: 18px 20px;
-
-    border-radius: 14px;
-
-    background: rgba(255,255,255,0.65);
-
-    display: flex;
-
-    gap: 13px;
-
-    color: #665b32;
-}
-
-
-
-/* =========================================
-   RESIDUOS
-========================================= */
-
-.waste {
-
-    background: white;
-}
-
-
-.waste-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(4,1fr);
-
-    gap: 18px;
-}
-
-
-.waste-card {
-
-    padding: 30px 25px;
-
-    border: 1px solid #e4e6df;
-
-    border-radius: 18px;
-
-    transition: 0.3s;
-}
-
-
-.waste-card:hover {
-
-    transform: translateY(-5px);
-
-    box-shadow: var(--sombra);
-}
-
-
-.waste-icon {
-
-    width: 50px;
-    height: 50px;
-
-    border-radius: 14px;
-
-    display: grid;
-
-    place-items: center;
-
-    margin-bottom: 22px;
-}
-
-
-.organic {
-
-    color: #497642;
-
-    background: #e8f0df;
-}
-
-
-.recycle {
-
-    color: #33706d;
-
-    background: #e0efec;
-}
-
-
-.waste-icon.oil {
-
-    color: var(--aceite);
-
-    background: #f0e9cc;
-}
-
-
-.general {
-
-    color: #6b6f6c;
-
-    background: #ececea;
-}
-
-
-.waste-card h3 {
-
-    color: var(--verde-oscuro);
-
-    margin-bottom: 7px;
-}
-
-
-.waste-card p {
-
-    color: var(--gris);
-
-    font-size: 0.9rem;
-
-    margin-bottom: 20px;
-}
-
-
-.waste-card span {
-
-    font-size: 0.75rem;
-
-    font-weight: bold;
-
-    color: var(--verde-claro);
-}
-
-
-
-/* =========================================
-   ESTRATEGIA
-========================================= */
-
-.actions {
-
+.btn-juego:hover {
     background: var(--verde-oscuro);
+
+    transform: translateY(-2px);
 }
 
+.resultado-juego {
+    padding-top: 20px;
 
-.action-box {
-
-    min-height: 430px;
-
-    padding: 60px;
-
-    background: linear-gradient(
-        120deg,
-        #214d3b,
-        #315f49
-    );
-
-    color: white;
-
-    border-radius: 30px;
-
-    display: grid;
-
-    grid-template-columns: 1.3fr 0.7fr;
-
-    align-items: center;
+    border-top: 1px solid var(--borde);
 }
 
+.resultado-icono {
+    margin-bottom: 10px;
 
-.action-box .section-tag {
-
-    color: #bdd1a7;
+    font-size: 60px;
 }
 
+.resultado-juego h3 {
+    margin-bottom: 8px;
 
-.action-box h2 {
+    font-family: "Playfair Display", serif;
 
-    color: white;
+    font-size: 30px;
 }
 
+.resultado-juego p {
+    margin-bottom: 20px;
 
-.action-box p {
-
-    color: rgba(255,255,255,0.72);
+    color: var(--texto-claro);
 }
-
-
-.metrics {
-
-    display: grid;
-
-    grid-template-columns: repeat(4,1fr);
-
-    gap: 12px;
-
-    margin-top: 35px;
-}
-
-
-.metrics div {
-
-    padding: 15px;
-
-    border-left: 1px solid rgba(255,255,255,0.2);
-}
-
-
-.metrics strong {
-
-    display: block;
-
-    color: #d1dfb8;
-}
-
-
-.metrics span {
-
-    display: block;
-
-    font-size: 0.75rem;
-
-    color: rgba(255,255,255,0.65);
-}
-
-
-.action-illustration {
-
-    text-align: center;
-}
-
-
-.action-illustration i {
-
-    font-size: 11rem;
-
-    color: rgba(255,255,255,0.12);
-}
-
 
 
 /* =========================================
@@ -1245,32 +1180,52 @@ h2 {
 ========================================= */
 
 .conclusion {
+    padding: 110px 0;
 
-    background: var(--crema);
+    background: white;
 
     text-align: center;
 }
 
-
-.conclusion-content {
-
-    max-width: 850px;
+.conclusion-contenido {
+    max-width: 800px;
 }
 
+.conclusion-icono {
+    width: 70px;
+    height: 70px;
 
-.conclusion-content p {
+    display: grid;
+    place-items: center;
 
-    color: var(--gris);
+    margin: 0 auto 25px;
 
-    margin-bottom: 18px;
+    background: var(--verde-claro);
+
+    border-radius: 50%;
+
+    color: var(--verde);
+
+    font-size: 28px;
 }
 
+.conclusion h2 {
+    margin-bottom: 22px;
 
-.conclusion-content .btn {
+    font-family: "Playfair Display", serif;
 
-    margin-top: 20px;
+    font-size: clamp(35px, 5vw, 52px);
+
+    line-height: 1.15;
 }
 
+.conclusion p {
+    margin-bottom: 30px;
+
+    color: var(--texto-claro);
+
+    font-size: 16px;
+}
 
 
 /* =========================================
@@ -1278,78 +1233,66 @@ h2 {
 ========================================= */
 
 .footer {
+    padding: 40px 0;
 
-    background: #0c261d;
+    background: #252d22;
 
     color: white;
 }
 
-
-.footer-content {
-
-    padding: 55px 0;
-
+.footer-contenido {
     display: flex;
+
+    align-items: center;
 
     justify-content: space-between;
 
-    gap: 30px;
+    gap: 20px;
 }
-
 
 .footer-logo {
-
-    margin-bottom: 15px;
-}
-
-
-.footer p,
-.footer-right span {
-
-    color: rgba(255,255,255,0.55);
-
-    font-size: 0.85rem;
-}
-
-
-.footer-right {
-
     display: flex;
 
-    flex-direction: column;
+    align-items: center;
 
-    text-align: right;
-
-    gap: 8px;
+    gap: 10px;
 }
 
+.footer-logo .logo-icono {
+    width: 34px;
+    height: 34px;
 
-.footer-bottom {
-
-    border-top: 1px solid rgba(255,255,255,0.08);
-
-    padding: 18px 0;
-
-    text-align: center;
+    font-size: 14px;
 }
 
+.footer p {
+    color: #b9c1b5;
+
+    font-size: 13px;
+}
+
+.footer-copy {
+    color: #929b8e;
+
+    font-size: 12px;
+}
 
 
 /* =========================================
    BOTÓN ARRIBA
 ========================================= */
 
-.btn-top {
-
+.btn-arriba {
     position: fixed;
 
     right: 25px;
-
     bottom: 25px;
 
     width: 45px;
-
     height: 45px;
+
+    display: grid;
+    place-items: center;
 
     border: none;
 
@@ -1361,23 +1304,26 @@ h2 {
 
     cursor: pointer;
 
-    z-index: 900;
-
     opacity: 0;
-
     visibility: hidden;
 
-    transition: 0.3s;
+    transform: translateY(15px);
+
+    transition: var(--transicion);
+
+    z-index: 900;
 }
 
-
-.btn-top.show {
-
+.btn-arriba.visible {
     opacity: 1;
-
     visibility: visible;
+
+    transform: translateY(0);
 }
 
+.btn-arriba:hover {
+    background: var(--verde-oscuro);
+}
 
 
 /* =========================================
@@ -1385,24 +1331,20 @@ h2 {
 ========================================= */
 
 .reveal {
-
     opacity: 0;
 
-    transform: translateY(30px);
+    transform: translateY(25px);
 
     transition:
         opacity 0.7s ease,
         transform 0.7s ease;
 }
 
-
 .reveal.visible {
-
     opacity: 1;
 
     transform: translateY(0);
 }
-
 
 
 /* =========================================
@@ -1411,142 +1353,146 @@ h2 {
 
 @media (max-width: 950px) {
 
-    .two-columns,
-    .two-columns.reverse {
+    .nav {
+        position: absolute;
 
-        grid-template-columns: 1fr;
-
-        gap: 35px;
-    }
-
-
-    .waste-grid {
-
-        grid-template-columns: repeat(2,1fr);
-    }
-
-
-    .action-box {
-
-        grid-template-columns: 1fr;
-    }
-
-
-    .action-illustration {
+        top: 75px;
+        left: 4%;
+        right: 4%;
 
         display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 5px;
+
+        padding: 15px;
+
+        background: white;
+
+        border: 1px solid var(--borde);
+
+        border-radius: 12px;
+
+        box-shadow: var(--sombra);
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        padding: 12px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .cards-temas {
+        grid-template-columns: 1fr;
+    }
+
+    .contenido-grid,
+    .contenido-grid.invertido {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .pasos-aceite {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .residuos-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .acciones-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+
+        text-align: center;
     }
 }
 
 
-@media (max-width: 750px) {
+@media (max-width: 600px) {
 
-    .section {
+    .hero {
+        min-height: 680px;
+    }
 
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-botones {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .hero-botones .btn {
+        width: 100%;
+    }
+
+    .seccion,
+    .introduccion,
+    .juego,
+    .conclusion {
         padding: 75px 0;
     }
 
-
-    .menu-toggle {
-
-        display: block;
+    .dato-card {
+        padding: 30px;
     }
 
-
-    .nav-links {
-
-        position: absolute;
-
-        top: 78px;
-
-        left: 0;
-
-        width: 100%;
-
-        padding: 25px;
-
-        background: var(--verde-oscuro);
-
-        flex-direction: column;
-
-        gap: 18px;
-
-        transform: translateY(-150%);
-
-        opacity: 0;
-
-        pointer-events: none;
-
-        transition: 0.3s;
-    }
-
-
-    .nav-links.open {
-
-        transform: translateY(0);
-
-        opacity: 1;
-
-        pointer-events: auto;
-    }
-
-
-    .hero h1 {
-
-        font-size: clamp(2.7rem,12vw,4.5rem);
-    }
-
-
-    .intro-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-    }
-
-
-    .topic-grid {
-
+    .pasos-aceite,
+    .residuos-grid {
         grid-template-columns: 1fr;
     }
 
-
-    .big-icon {
-
-        width: 260px;
-
-        height: 260px;
-
-        font-size: 7rem;
+    .residuo-card p {
+        min-height: auto;
     }
 
-
-    .waste-grid {
-
+    .opciones {
         grid-template-columns: 1fr;
     }
 
-
-    .action-box {
-
-        padding: 35px 25px;
+    .juego-card {
+        padding: 25px 18px;
     }
 
-
-    .metrics {
-
-        grid-template-columns: repeat(2,1fr);
+    .juego-info {
+        font-size: 12px;
     }
 
-
-    .footer-content {
-
-        flex-direction: column;
+    .icono-residuo {
+        font-size: 60px;
     }
 
-
-    .footer-right {
-
-        text-align: left;
+    .residuo-pregunta h3 {
+        font-size: 25px;
     }
+
+    .accion {
+        grid-template-columns: 45px 1fr;
+        gap: 12px;
+    }
+
 }

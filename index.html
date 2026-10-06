@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Manejo responsable del agua, alimentos, aceite y residuos en una cocina gastronómica">
+        content="Manejo responsable del agua, alimentos, aceite y residuos en una cocina gastronómica.">
 
     <title>Cocina sin Rastro | Manejo Responsable</title>
 
-    <!-- FUENTES -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
 
-    <!-- ICONOS -->
+    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -26,776 +24,305 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 
-
 <body>
 
     <!-- ==============================
-         BOTÓN VOLVER ARRIBA
+         HEADER
     =============================== -->
 
-    <button id="btnTop" class="btn-top">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
+    <header class="header" id="header">
 
-
-    <!-- ==============================
-         MENÚ
-    =============================== -->
-
-    <header class="header" id="inicio">
-
-        <nav class="navbar container">
+        <div class="contenedor header-contenido">
 
             <a href="#inicio" class="logo">
-
-                <span class="logo-icon">
+                <span class="logo-icono">
                     <i class="fa-solid fa-leaf"></i>
                 </span>
 
-                <span>
-                    Cocina <strong>sin Rastro</strong>
-                </span>
-
+                <span>Cocina sin Rastro</span>
             </a>
 
-
-            <button class="menu-toggle" id="menuToggle">
+            <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
                 <i class="fa-solid fa-bars"></i>
             </button>
 
+            <nav class="nav" id="nav">
 
-            <ul class="nav-links" id="navLinks">
+                <a href="#inicio">Inicio</a>
+                <a href="#agua">Agua</a>
+                <a href="#alimentos">Alimentos</a>
+                <a href="#aceite">Aceite</a>
+                <a href="#residuos">Residuos</a>
+                <a href="#acciones">Acciones</a>
+                <a href="#juego" class="nav-juego">Mini juego</a>
 
-                <li>
-                    <a href="#inicio">Inicio</a>
-                </li>
+            </nav>
 
-                <li>
-                    <a href="#agua">Agua</a>
-                </li>
-
-                <li>
-                    <a href="#alimentos">Alimentos</a>
-                </li>
-
-                <li>
-                    <a href="#aceite">Aceite</a>
-                </li>
-
-                <li>
-                    <a href="#residuos">Residuos</a>
-                </li>
-
-                <li>
-                    <a href="#acciones">Acciones</a>
-                </li>
-
-            </ul>
-
-        </nav>
+        </div>
 
     </header>
 
 
-
     <!-- ==============================
-         CONTENIDO PRINCIPAL
+         INICIO
     =============================== -->
 
     <main>
 
+        <section class="hero" id="inicio">
 
-        <!-- ==============================
-             PORTADA
-        =============================== -->
+            <div class="hero-overlay"></div>
 
-        <section class="hero">
+            <div class="contenedor hero-contenido">
 
-            <div class="hero-content container reveal">
-
-                <span class="eyebrow">
-                    EQUIPO 3 · GASTRONOMÍA
+                <span class="hero-etiqueta">
+                    GASTRONOMÍA RESPONSABLE
                 </span>
 
-
                 <h1>
-
                     Manejo responsable de
-
-                    <span>
-                        agua, alimentos y aceite
-                    </span>
-
+                    <span>agua, alimentos y aceite</span>
                 </h1>
 
-
                 <p>
-
-                    Una cocina responsable aprovecha mejor
-                    sus recursos, reduce desperdicios y
-                    mantiene un ambiente higiénico y seguro.
-
+                    Pequeñas acciones dentro de la cocina pueden
+                    ayudar a reducir el desperdicio, aprovechar mejor
+                    los recursos y mantener un ambiente higiénico y seguro.
                 </p>
 
+                <div class="hero-botones">
 
-                <div class="hero-buttons">
-
-                    <a href="#agua" class="btn btn-primary">
-
+                    <a href="#temas" class="btn btn-principal">
                         Conocer más
-
                         <i class="fa-solid fa-arrow-down"></i>
-
                     </a>
 
-
-                    <a href="#acciones" class="btn btn-outline">
-
-                        Ver acciones
-
+                    <a href="#juego" class="btn btn-secundario">
+                        Jugar
+                        <i class="fa-solid fa-gamepad"></i>
                     </a>
 
                 </div>
 
             </div>
 
-
-            <div class="scroll-indicator">
-
-                <span>DESLIZA</span>
-
-                <i class="fa-solid fa-chevron-down"></i>
-
-            </div>
-
         </section>
-
 
 
         <!-- ==============================
              INTRODUCCIÓN
         =============================== -->
 
-        <section class="intro section">
+        <section class="introduccion" id="temas">
 
-            <div class="container intro-grid">
+            <div class="contenedor">
 
-                <div class="reveal">
+                <div class="titulo-seccion centrado">
 
-                    <span class="section-tag">
-                        INTRODUCCIÓN
-                    </span>
-
-
-                    <h2>
-                        Una cocina también puede cuidar el planeta.
-                    </h2>
-
-                </div>
-
-
-                <div class="intro-text reveal">
-
-                    <p>
-
-                        Una cocina de gastronomía utiliza diariamente
-                        grandes cantidades de agua, alimentos,
-                        aceites, productos de limpieza y materiales
-                        de empaque.
-
-                    </p>
-
-
-                    <p>
-
-                        Por ello, además de aprender técnicas culinarias,
-                        es importante aprender a utilizar correctamente
-                        los recursos y manejar los residuos que se generan.
-
-                    </p>
-
-
-                    <div class="quote">
-
-                        <i class="fa-solid fa-quote-left"></i>
-
-                        <span>
-                            Pequeñas acciones en la cocina
-                            pueden generar grandes cambios.
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==============================
-             TRES TEMAS
-        =============================== -->
-
-        <section class="topics section">
-
-            <div class="container">
-
-                <div class="section-heading reveal">
-
-                    <span class="section-tag">
-                        TRES RECURSOS CLAVE
+                    <span class="etiqueta">
+                        COCINA SIN RASTRO
                     </span>
 
                     <h2>
-                        ¿Dónde podemos actuar?
+                        Una cocina también puede cuidar
+                        <span>el medio ambiente</span>
                     </h2>
 
                     <p>
-                        Conoce los principales puntos de atención
-                        dentro de una cocina.
+                        Una cocina gastronómica utiliza diariamente
+                        agua, alimentos, aceites, productos de limpieza
+                        y materiales de empaque.
                     </p>
 
                 </div>
 
 
-                <div class="topic-grid">
-
+                <div class="cards-temas">
 
                     <!-- AGUA -->
 
-                    <a href="#agua" class="topic-card water reveal">
+                    <article class="tema-card agua-card">
 
-                        <div class="topic-icon">
-
+                        <div class="tema-icono">
                             <i class="fa-solid fa-droplet"></i>
-
                         </div>
 
                         <span>01</span>
 
-                        <h3>
-                            Agua
-                        </h3>
+                        <h3>Agua</h3>
 
                         <p>
-                            Ahorrar agua sin comprometer
-                            la higiene ni la seguridad alimentaria.
+                            Utilizar solamente el agua necesaria y
+                            evitar desperdicios durante la preparación,
+                            limpieza y lavado.
                         </p>
 
-                        <div class="card-link">
+                        <a href="#agua">
+                            Conocer →
+                        </a>
 
-                            Aprender
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </div>
-
-                    </a>
-
+                    </article>
 
 
                     <!-- ALIMENTOS -->
 
-                    <a href="#alimentos" class="topic-card food reveal">
+                    <article class="tema-card alimentos-card">
 
-                        <div class="topic-icon">
-
+                        <div class="tema-icono">
                             <i class="fa-solid fa-carrot"></i>
-
                         </div>
 
                         <span>02</span>
 
-                        <h3>
-                            Alimentos
-                        </h3>
+                        <h3>Alimentos</h3>
 
                         <p>
-                            Aprovechar mejor los ingredientes
-                            y reducir el desperdicio.
+                            Aprovechar correctamente los alimentos y
+                            reducir la cantidad que termina como residuo.
                         </p>
 
-                        <div class="card-link">
+                        <a href="#alimentos">
+                            Conocer →
+                        </a>
 
-                            Aprender
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </div>
-
-                    </a>
-
+                    </article>
 
 
                     <!-- ACEITE -->
 
-                    <a href="#aceite" class="topic-card oil reveal">
+                    <article class="tema-card aceite-card">
 
-                        <div class="topic-icon">
-
+                        <div class="tema-icono">
                             <i class="fa-solid fa-bottle-droplet"></i>
-
                         </div>
 
                         <span>03</span>
 
-                        <h3>
-                            Aceite
-                        </h3>
+                        <h3>Aceite</h3>
 
                         <p>
-                            Evitar que el aceite usado llegue
-                            al drenaje y buscar su aprovechamiento.
+                            Nunca tirar aceite usado al fregadero.
+                            Debe enfriarse, filtrarse, almacenarse y
+                            entregarse para su recolección.
                         </p>
 
-                        <div class="card-link">
+                        <a href="#aceite">
+                            Conocer →
+                        </a>
 
-                            Aprender
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </div>
-
-                    </a>
+                    </article>
 
                 </div>
 
             </div>
 
         </section>
-
 
 
         <!-- ==============================
              AGUA
         =============================== -->
 
-        <section id="agua" class="content-section water-section section">
+        <section class="seccion contenido-agua" id="agua">
 
-            <div class="container two-columns">
+            <div class="contenedor">
 
+                <div class="contenido-grid">
 
-                <div class="content-visual reveal">
+                    <div class="contenido-texto">
 
-                    <div class="big-icon water-bg">
-
-                        <i class="fa-solid fa-droplet"></i>
-
-                    </div>
-
-
-                    <div class="floating-stat">
-
-                        <strong>01</strong>
-
-                        <span>
-                            Recurso esencial
+                        <span class="etiqueta">
+                            01 · AGUA
                         </span>
 
-                    </div>
-
-                </div>
-
-
-
-                <div class="content-info reveal">
-
-                    <span class="section-tag">
-                        01 · AGUA
-                    </span>
-
-
-                    <h2>
-                        Usarla correctamente también es cocinar responsablemente.
-                    </h2>
-
-
-                    <p>
-
-                        El agua es indispensable para preparar
-                        y cocinar alimentos, lavar frutas y verduras,
-                        limpiar utensilios y superficies,
-                        lavarse las manos, elaborar hielo
-                        y preparar bebidas.
-
-                    </p>
-
-
-                    <h3>
-                        Problemas frecuentes
-                    </h3>
-
-
-                    <ul class="check-list danger-list">
-
-                        <li>
-                            <i class="fa-solid fa-xmark"></i>
-                            Dejar las llaves abiertas innecesariamente.
-                        </li>
-
-                        <li>
-                            <i class="fa-solid fa-xmark"></i>
-                            Ignorar fugas en llaves, tuberías o mangueras.
-                        </li>
-
-                        <li>
-                            <i class="fa-solid fa-xmark"></i>
-                            Lavar utensilios con un chorro continuo.
-                        </li>
-
-                        <li>
-                            <i class="fa-solid fa-xmark"></i>
-                            Utilizar más agua de la necesaria.
-                        </li>
-
-                    </ul>
-
-
-                    <h3>
-                        Uso correcto
-                    </h3>
-
-
-                    <ul class="check-list">
-
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            Cerrar las llaves cuando no se utilicen.
-                        </li>
-
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            Reparar inmediatamente las fugas.
-                        </li>
-
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            Retirar restos de comida antes de lavar.
-                        </li>
-
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            Usar solamente la cantidad necesaria.
-                        </li>
-
-                        <li>
-                            <i class="fa-solid fa-check"></i>
-                            Mantener limpios los drenajes.
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==============================
-             ALIMENTOS
-        =============================== -->
-
-        <section id="alimentos" class="content-section food-section section">
-
-            <div class="container two-columns reverse">
-
-
-                <div class="content-info reveal">
-
-                    <span class="section-tag">
-                        02 · ALIMENTOS
-                    </span>
-
-
-                    <h2>
-                        Aprovechar los alimentos es parte de una buena cocina.
-                    </h2>
-
-
-                    <p>
-
-                        El manejo responsable busca reducir
-                        la cantidad de alimentos que terminan
-                        como residuos y aprovechar aquellos
-                        ingredientes que todavía pueden utilizarse
-                        de manera segura.
-
-                    </p>
-
-
-                    <div class="feature-list">
-
-
-                        <div class="feature">
-
-                            <div class="feature-icon">
-
-                                <i class="fa-solid fa-box-open"></i>
-
-                            </div>
-
-
-                            <div>
-
-                                <h3>
-                                    Planificar
-                                </h3>
-
-                                <p>
-                                    Utilizar las cantidades necesarias
-                                    para evitar excedentes.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="feature">
-
-                            <div class="feature-icon">
-
-                                <i class="fa-solid fa-temperature-low"></i>
-
-                            </div>
-
-
-                            <div>
-
-                                <h3>
-                                    Conservar
-                                </h3>
-
-                                <p>
-                                    Mantener los alimentos en condiciones
-                                    adecuadas para evitar pérdidas.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="feature">
-
-                            <div class="feature-icon">
-
-                                <i class="fa-solid fa-recycle"></i>
-
-                            </div>
-
-
-                            <div>
-
-                                <h3>
-                                    Aprovechar
-                                </h3>
-
-                                <p>
-                                    Separar residuos orgánicos y buscar
-                                    su aprovechamiento cuando sea viable.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="content-visual reveal">
-
-                    <div class="big-icon food-bg">
-
-                        <i class="fa-solid fa-carrot"></i>
-
-                    </div>
-
-
-                    <div class="floating-stat">
-
-                        <strong>02</strong>
-
-                        <span>
-                            Menos desperdicio
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==============================
-             ACEITE
-        =============================== -->
-
-        <section id="aceite" class="content-section oil-section section">
-
-            <div class="container two-columns">
-
-
-                <div class="content-visual reveal">
-
-                    <div class="big-icon oil-bg">
-
-                        <i class="fa-solid fa-bottle-droplet"></i>
-
-                    </div>
-
-
-                    <div class="floating-stat">
-
-                        <strong>03</strong>
-
-                        <span>
-                            Residuo aprovechable
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="content-info reveal">
-
-                    <span class="section-tag">
-                        03 · ACEITE DE COCINA USADO
-                    </span>
-
-
-                    <h2>
-                        El aceite usado nunca debe terminar en el fregadero.
-                    </h2>
-
-
-                    <p>
-
-                        Tirarlo al drenaje puede contribuir
-                        a obstrucciones y generar problemas
-                        en los sistemas de drenaje y tratamiento
-                        de aguas residuales.
-
-                    </p>
-
-
-
-                    <div class="process">
-
-
-                        <div class="process-step">
-
-                            <span>1</span>
-
-                            <div>
-
-                                <strong>
-                                    Enfriar
-                                </strong>
-
-                                <small>
-                                    Dejar que el aceite baje de temperatura.
-                                </small>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="process-line"></div>
-
-
-                        <div class="process-step">
-
-                            <span>2</span>
-
-                            <div>
-
-                                <strong>
-                                    Filtrar
-                                </strong>
-
-                                <small>
-                                    Retirar residuos de alimentos.
-                                </small>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="process-line"></div>
-
-
-                        <div class="process-step">
-
-                            <span>3</span>
-
-                            <div>
-
-                                <strong>
-                                    Almacenar
-                                </strong>
-
-                                <small>
-                                    Usar un recipiente resistente y cerrado.
-                                </small>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="process-line"></div>
-
-
-                        <div class="process-step">
-
-                            <span>4</span>
-
-                            <div>
-
-                                <strong>
-                                    Recolectar
-                                </strong>
-
-                                <small>
-                                    Llevarlo a un punto autorizado.
-                                </small>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="warning-box">
-
-                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <h2>
+                            Cada gota cuenta
+                        </h2>
 
                         <p>
+                            El agua es indispensable en una cocina
+                            gastronómica. Se utiliza para preparar y
+                            cocinar alimentos, lavar frutas y verduras,
+                            limpiar utensilios, superficies y equipos,
+                            lavarse las manos, elaborar hielo y preparar
+                            bebidas.
+                        </p>
 
-                            <strong>Importante:</strong>
+                        <p>
+                            En una cocina profesional, el agua que tiene
+                            contacto directo con los alimentos, materias
+                            primas o superficies en contacto con alimentos
+                            debe ser potable.
+                        </p>
 
-                            evita sobrecalentar el aceite y retíralo
-                            cuando presente signos de deterioro o rancidez.
 
+                        <div class="lista-check">
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                <span>
+                                    Cerrar las llaves cuando no se estén utilizando.
+                                </span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                <span>
+                                    Reparar inmediatamente las fugas.
+                                </span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                <span>
+                                    Evitar mantener el agua corriendo mientras se
+                                    enjabonan los utensilios.
+                                </span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                <span>
+                                    Utilizar solamente la cantidad necesaria para cocinar.
+                                </span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                <span>
+                                    Mantener limpios los drenajes.
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dato-card agua-dato">
+
+                        <div class="dato-icono">
+                            <i class="fa-solid fa-faucet-drip"></i>
+                        </div>
+
+                        <h3>
+                            ¿Cómo ahorrar agua?
+                        </h3>
+
+                        <p>
+                            Una práctica sencilla es cerrar la llave
+                            mientras se enjabonan los trastes y abrirla
+                            principalmente durante el enjuague.
+                        </p>
+
+                        <div class="dato-numero">
+                            <span>+</span>
+                            <strong>9</strong>
+                        </div>
+
+                        <p class="dato-pequeno">
+                            acciones de uso responsable pueden aplicarse
+                            dentro de la cocina.
                         </p>
 
                     </div>
@@ -807,49 +334,260 @@
         </section>
 
 
-
         <!-- ==============================
-             RESIDUOS
+             ALIMENTOS
         =============================== -->
 
-        <section id="residuos" class="waste section">
+        <section class="seccion seccion-clara" id="alimentos">
 
-            <div class="container">
+            <div class="contenedor">
+
+                <div class="contenido-grid invertido">
+
+                    <div class="dato-card alimentos-dato">
+
+                        <div class="dato-icono">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+
+                        <h3>
+                            Aprovechamiento
+                        </h3>
+
+                        <p>
+                            Antes de desechar un alimento, es importante
+                            revisar si todavía puede aprovecharse de
+                            manera segura.
+                        </p>
+
+                        <div class="mini-lista">
+
+                            <span>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Planificar
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Aprovechar
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Separar
+                            </span>
+
+                        </div>
+
+                    </div>
 
 
-                <div class="section-heading reveal">
+                    <div class="contenido-texto">
 
-                    <span class="section-tag">
-                        RESIDUOS EN GENERAL
+                        <span class="etiqueta">
+                            02 · ALIMENTOS
+                        </span>
+
+                        <h2>
+                            Aprovechar antes de desechar
+                        </h2>
+
+                        <p>
+                            El desperdicio de alimentos representa una
+                            pérdida de recursos. Dentro de una cocina es
+                            importante planificar las cantidades, almacenar
+                            correctamente y aprovechar los alimentos que
+                            todavía sean aptos para su uso.
+                        </p>
+
+                        <p>
+                            Los restos de frutas, verduras y otros alimentos
+                            pueden formar parte de los residuos orgánicos.
+                            Cuando sea viable, estos pueden destinarse a
+                            composta o aprovechamiento.
+                        </p>
+
+                        <div class="frase-destacada">
+
+                            <i class="fa-solid fa-quote-left"></i>
+
+                            <p>
+                                Aprovechar mejor los alimentos ayuda a
+                                disminuir la cantidad de residuos generados.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             ACEITE
+        =============================== -->
+
+        <section class="seccion contenido-aceite" id="aceite">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion">
+
+                    <span class="etiqueta">
+                        03 · ACEITE
                     </span>
 
-
                     <h2>
-                        Separar para aprovechar.
+                        El aceite usado
+                        <span>no va al drenaje</span>
                     </h2>
 
-
                     <p>
-
-                        Reducir, separar, reutilizar, reciclar
-                        y disponer correctamente ayuda a mantener
-                        una cocina higiénica y segura.
-
+                        El aceite vegetal usado puede generar problemas
+                        en los sistemas de drenaje cuando se desecha
+                        incorrectamente.
                     </p>
 
                 </div>
 
 
+                <div class="pasos-aceite">
 
-                <div class="waste-grid">
+                    <div class="paso">
+
+                        <div class="paso-numero">
+                            01
+                        </div>
+
+                        <i class="fa-solid fa-temperature-arrow-down"></i>
+
+                        <h3>Enfriar</h3>
+
+                        <p>
+                            Dejar que el aceite usado se enfríe antes
+                            de manipularlo.
+                        </p>
+
+                    </div>
 
 
-                    <article class="waste-card reveal">
+                    <div class="paso">
 
-                        <div class="waste-icon organic">
+                        <div class="paso-numero">
+                            02
+                        </div>
 
-                            <i class="fa-solid fa-seedling"></i>
+                        <i class="fa-solid fa-filter"></i>
 
+                        <h3>Filtrar</h3>
+
+                        <p>
+                            Filtrar el aceite para retirar restos
+                            de alimentos.
+                        </p>
+
+                    </div>
+
+
+                    <div class="paso">
+
+                        <div class="paso-numero">
+                            03
+                        </div>
+
+                        <i class="fa-solid fa-box"></i>
+
+                        <h3>Almacenar</h3>
+
+                        <p>
+                            Colocarlo en un recipiente resistente,
+                            cerrado y adecuado.
+                        </p>
+
+                    </div>
+
+
+                    <div class="paso">
+
+                        <div class="paso-numero">
+                            04
+                        </div>
+
+                        <i class="fa-solid fa-recycle"></i>
+
+                        <h3>Entregar</h3>
+
+                        <p>
+                            Llevarlo a un sistema de recolección
+                            o reciclaje.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="alerta-aceite">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    <div>
+                        <strong>
+                            Recuerda:
+                        </strong>
+
+                        <p>
+                            Nunca tires el aceite usado por el fregadero
+                            o drenaje.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             RESIDUOS
+        =============================== -->
+
+        <section class="seccion seccion-clara" id="residuos">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion centrado">
+
+                    <span class="etiqueta">
+                        SEPARACIÓN
+                    </span>
+
+                    <h2>
+                        Conoce los principales
+                        <span>residuos de una cocina</span>
+                    </h2>
+
+                    <p>
+                        Separar correctamente facilita el aprovechamiento,
+                        reciclaje y disposición adecuada de los residuos.
+                    </p>
+
+                </div>
+
+
+                <div class="residuos-grid">
+
+                    <!-- ORGÁNICO -->
+
+                    <article class="residuo-card">
+
+                        <div class="residuo-icono">
+                            🌱
                         </div>
 
                         <h3>
@@ -857,24 +595,23 @@
                         </h3>
 
                         <p>
-                            Cáscaras, frutas, verduras,
-                            restos de comida y café.
+                            Cáscaras, frutas, verduras, restos de comida
+                            y café.
                         </p>
 
                         <span>
-                            Composta / aprovechamiento
+                            Aprovechamiento / composta
                         </span>
 
                     </article>
 
 
+                    <!-- RECICLABLE -->
 
-                    <article class="waste-card reveal">
+                    <article class="residuo-card">
 
-                        <div class="waste-icon recycle">
-
-                            <i class="fa-solid fa-recycle"></i>
-
+                        <div class="residuo-icono">
+                            ♻️
                         </div>
 
                         <h3>
@@ -882,49 +619,23 @@
                         </h3>
 
                         <p>
-                            Papel, cartón, plástico, vidrio,
-                            latas y metales.
+                            Papel, cartón, plástico, vidrio y metales
+                            según el sistema local.
                         </p>
 
                         <span>
-                            Separar y reciclar
+                            Separar y enviar a reciclaje
                         </span>
 
                     </article>
 
 
+                    <!-- NO RECICLABLE -->
 
-                    <article class="waste-card reveal">
+                    <article class="residuo-card">
 
-                        <div class="waste-icon oil">
-
-                            <i class="fa-solid fa-bottle-droplet"></i>
-
-                        </div>
-
-                        <h3>
-                            Aceite usado
-                        </h3>
-
-                        <p>
-                            Aceite vegetal utilizado
-                            para freír o cocinar.
-                        </p>
-
-                        <span>
-                            Recolectar / reciclar
-                        </span>
-
-                    </article>
-
-
-
-                    <article class="waste-card reveal">
-
-                        <div class="waste-icon general">
-
-                            <i class="fa-solid fa-trash-can"></i>
-
+                        <div class="residuo-icono">
+                            🗑️
                         </div>
 
                         <h3>
@@ -937,7 +648,31 @@
                         </p>
 
                         <span>
-                            Contenedor correspondiente
+                            Depositar correctamente
+                        </span>
+
+                    </article>
+
+
+                    <!-- ACEITE -->
+
+                    <article class="residuo-card">
+
+                        <div class="residuo-icono">
+                            🛢️
+                        </div>
+
+                        <h3>
+                            Aceite usado
+                        </h3>
+
+                        <p>
+                            Aceite vegetal utilizado para freír
+                            o cocinar.
+                        </p>
+
+                        <span>
+                            Recolección especializada
                         </span>
 
                     </article>
@@ -949,92 +684,115 @@
         </section>
 
 
-
         <!-- ==============================
-             ESTRATEGIA
+             ACCIONES
         =============================== -->
 
-        <section id="acciones" class="actions section">
+        <section class="seccion acciones" id="acciones">
 
-            <div class="container">
+            <div class="contenedor">
 
-                <div class="action-box reveal">
+                <div class="acciones-grid">
 
+                    <div class="acciones-texto">
 
-                    <div class="action-content">
-
-                        <span class="section-tag">
-                            ESTRATEGIA PARA UNA ESCUELA
+                        <span class="etiqueta">
+                            EN LA ESCUELA
                         </span>
 
-
                         <h2>
-                            Un punto de recolección de aceite usado.
+                            Acciones que podemos realizar
                         </h2>
 
-
                         <p>
-
-                            Cada grupo de estudiantes puede depositar
-                            el aceite utilizado en un recipiente destinado
-                            exclusivamente para este residuo.
-
+                            Una escuela de gastronomía puede implementar
+                            estrategias sencillas para reducir residuos
+                            y mejorar el manejo de los recursos.
                         </p>
-
-
-                        <div class="metrics">
-
-                            <div>
-
-                                <strong>01</strong>
-
-                                <span>
-                                    Cantidad generada
-                                </span>
-
-                            </div>
-
-
-                            <div>
-
-                                <strong>02</strong>
-
-                                <span>
-                                    Cantidad recolectada
-                                </span>
-
-                            </div>
-
-
-                            <div>
-
-                                <strong>03</strong>
-
-                                <span>
-                                    Cantidad reciclada
-                                </span>
-
-                            </div>
-
-
-                            <div>
-
-                                <strong>04</strong>
-
-                                <span>
-                                    Prácticas realizadas
-                                </span>
-
-                            </div>
-
-                        </div>
 
                     </div>
 
 
-                    <div class="action-illustration">
+                    <div class="acciones-lista">
 
-                        <i class="fa-solid fa-recycle"></i>
+                        <div class="accion">
+
+                            <span>
+                                01
+                            </span>
+
+                            <div>
+                                <h3>
+                                    Punto de recolección
+                                </h3>
+
+                                <p>
+                                    Crear un punto exclusivo para recolectar
+                                    aceite usado.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="accion">
+
+                            <span>
+                                02
+                            </span>
+
+                            <div>
+                                <h3>
+                                    Separar residuos
+                                </h3>
+
+                                <p>
+                                    Colocar recipientes identificados para
+                                    cada tipo de residuo.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="accion">
+
+                            <span>
+                                03
+                            </span>
+
+                            <div>
+                                <h3>
+                                    Reducir desperdicios
+                                </h3>
+
+                                <p>
+                                    Evitar generar residuos innecesarios
+                                    durante las prácticas.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="accion">
+
+                            <span>
+                                04
+                            </span>
+
+                            <div>
+                                <h3>
+                                    Capacitar
+                                </h3>
+
+                                <p>
+                                    Enseñar a estudiantes y personal
+                                    sobre la separación adecuada.
+                                </p>
+                            </div>
+
+                        </div>
 
                     </div>
 
@@ -1045,61 +803,214 @@
         </section>
 
 
+        <!-- ==============================
+             MINI JUEGO
+        =============================== -->
+
+        <section class="juego" id="juego">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion centrado">
+
+                    <span class="etiqueta">
+                        MINI JUEGO
+                    </span>
+
+                    <h2>
+                        ¿Dónde va este
+                        <span>residuo?</span>
+                    </h2>
+
+                    <p>
+                        Pon a prueba lo que aprendiste sobre el manejo
+                        responsable de los residuos en la cocina.
+                    </p>
+
+                </div>
+
+
+                <div class="juego-card">
+
+                    <!-- INFORMACIÓN DEL JUEGO -->
+
+                    <div class="juego-info">
+
+                        <span id="preguntaNumero">
+                            Pregunta 1 de 5
+                        </span>
+
+                        <span id="puntuacion">
+                            Puntos: 0
+                        </span>
+
+                    </div>
+
+
+                    <!-- RESIDUO -->
+
+                    <div class="residuo-pregunta">
+
+                        <div class="icono-residuo" id="iconoResiduo">
+                            🍌
+                        </div>
+
+                        <h3 id="nombreResiduo">
+                            Cáscara de plátano
+                        </h3>
+
+                        <p>
+                            ¿Dónde debemos colocar este residuo?
+                        </p>
+
+                    </div>
+
+
+                    <!-- OPCIONES -->
+
+                    <div class="opciones">
+
+                        <button
+                            class="opcion"
+                            type="button"
+                            data-respuesta="organico">
+
+                            <span>🌱</span>
+                            Orgánico
+
+                        </button>
+
+
+                        <button
+                            class="opcion"
+                            type="button"
+                            data-respuesta="reciclable">
+
+                            <span>♻️</span>
+                            Reciclable
+
+                        </button>
+
+
+                        <button
+                            class="opcion"
+                            type="button"
+                            data-respuesta="aceite">
+
+                            <span>🛢️</span>
+                            Aceite usado
+
+                        </button>
+
+
+                        <button
+                            class="opcion"
+                            type="button"
+                            data-respuesta="no-aprovechable">
+
+                            <span>🗑️</span>
+                            No aprovechable
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- MENSAJE -->
+
+                    <p
+                        id="mensajeJuego"
+                        class="mensaje-juego"
+                        aria-live="polite">
+                    </p>
+
+
+                    <!-- SIGUIENTE -->
+
+                    <button
+                        id="siguientePregunta"
+                        class="btn-juego"
+                        type="button"
+                        style="display: none;">
+
+                        Siguiente pregunta
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <!-- RESULTADO -->
+
+                    <div
+                        id="resultadoJuego"
+                        class="resultado-juego"
+                        style="display: none;">
+
+                        <div class="resultado-icono">
+                            🏆
+                        </div>
+
+                        <h3>
+                            ¡Juego terminado!
+                        </h3>
+
+                        <p id="resultadoTexto">
+                            Obtuviste 0 de 5 puntos.
+                        </p>
+
+                        <button
+                            id="reiniciarJuego"
+                            class="btn-juego"
+                            type="button">
+
+                            <i class="fa-solid fa-rotate-right"></i>
+                            Jugar nuevamente
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
 
         <!-- ==============================
              CONCLUSIÓN
         =============================== -->
 
-        <section class="conclusion section">
+        <section class="conclusion">
 
-            <div class="container conclusion-content reveal">
+            <div class="contenedor conclusion-contenido">
 
-                <span class="section-tag">
+                <div class="conclusion-icono">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+
+                <span class="etiqueta">
                     CONCLUSIÓN
                 </span>
 
-
                 <h2>
-                    Una cocina responsable empieza con nuestras decisiones.
+                    Una cocina responsable
+                    comienza con pequeñas acciones.
                 </h2>
 
-
                 <p>
-
                     Ahorrar agua permite utilizar el recurso de manera
                     eficiente sin comprometer la higiene. Separar y
                     recolectar correctamente el aceite evita que termine
-                    en el drenaje.
-
-                </p>
-
-
-                <p>
-
-                    Separar los residuos orgánicos puede reducir
-                    la cantidad de basura y, cuando es viable,
-                    producir composta. Separar los residuos
+                    en el drenaje. Separar los residuos orgánicos permite
+                    reducir la cantidad de basura y, cuando es viable,
+                    producir composta. La separación de residuos
                     inorgánicos facilita su reutilización y reciclaje.
-
                 </p>
 
-
-                <p>
-
-                    Para una escuela de gastronomía, estas prácticas
-                    también tienen un valor educativo: la responsabilidad
-                    ambiental forma parte de las buenas prácticas
-                    profesionales de una cocina.
-
-                </p>
-
-
-                <a href="#inicio" class="btn btn-primary">
-
+                <a href="#inicio" class="btn btn-principal">
                     Volver al inicio
-
                     <i class="fa-solid fa-arrow-up"></i>
-
                 </a>
 
             </div>
@@ -1109,72 +1020,54 @@
     </main>
 
 
-
     <!-- ==============================
          FOOTER
     =============================== -->
 
     <footer class="footer">
 
-        <div class="container footer-content">
+        <div class="contenedor footer-contenido">
 
+            <div class="footer-logo">
 
-            <div>
-
-                <a href="#inicio" class="logo footer-logo">
-
-                    <span class="logo-icon">
-
-                        <i class="fa-solid fa-leaf"></i>
-
-                    </span>
-
-                    <span>
-                        Cocina <strong>sin Rastro</strong>
-                    </span>
-
-                </a>
-
-
-                <p>
-                    Manejo responsable de agua,
-                    alimentos y aceite.
-                </p>
-
-            </div>
-
-
-            <div class="footer-right">
-
-                <span>
-                    Equipo 3 · Gastronomía
+                <span class="logo-icono">
+                    <i class="fa-solid fa-leaf"></i>
                 </span>
 
-                <span>
-                    Hacia un futuro libre de residuos.
-                </span>
+                <strong>
+                    Cocina sin Rastro
+                </strong>
 
             </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
 
             <p>
-                Proyecto educativo · 2026
+                Manejo responsable de agua, alimentos, aceite y residuos.
             </p>
+
+            <span class="footer-copy">
+                Proyecto académico · Gastronomía
+            </span>
 
         </div>
 
     </footer>
 
 
+    <!-- BOTÓN ARRIBA -->
 
-    <!-- JAVASCRIPT -->
+    <button
+        id="btnArriba"
+        class="btn-arriba"
+        aria-label="Volver arriba">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+
+    <!-- JavaScript -->
 
     <script src="script.js"></script>
 
 </body>
-
 </html>
